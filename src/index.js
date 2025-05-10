@@ -55,7 +55,8 @@ const modal = document.getElementById('modal');
     }
 
     // Телефон
-    const phonePattern = /^\+?[0-9\s\-]{7,15}$/;
+    const phonePattern = /^\+\d \(\d{3}\) \d{3}-\d{4}$/;
+
     if (!phonePattern.test(phoneInput.value.trim())) {
       phoneError.textContent = 'Введите корректный номер';
       phoneError.style.display = 'block';
