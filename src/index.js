@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     if (inputValue.length > 16) {
-      inputValue = inputValue.slice(0, 16);
+      inputValue = inputValue.slice(0, 17);
     }
 
     e.target.value = inputValue; 

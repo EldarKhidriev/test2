@@ -104,6 +104,10 @@ ul, ol {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    &:hover {
+      background-color: #11804e;
+      cursor: pointer;
+    }
   }
 }
 
@@ -453,6 +457,10 @@ ul, ol {
     font-weight: 500;
     font-style: normal;
     letter-spacing: 0.02em;
+    &:hover {
+      background-color: #11804e;
+      cursor: pointer;
+    }
   }
 
 

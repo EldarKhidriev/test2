@@ -1,0 +1,1 @@
+const video=document.getElementById("video"),overlay=document.getElementById("videoOverlay");overlay.addEventListener("click",(()=>{overlay.style.display="none",video.play()}));
