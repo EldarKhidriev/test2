@@ -104,9 +104,11 @@ ul, ol {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    transition: background-color 0.3s ease;
     &:hover {
       background-color: #11804e;
       cursor: pointer;
+      
     }
   }
 }
@@ -119,6 +121,7 @@ ul, ol {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
   @media (max-width: 1200px) {
       min-height: 629px;
     }
@@ -457,6 +460,7 @@ ul, ol {
     font-weight: 500;
     font-style: normal;
     letter-spacing: 0.02em;
+    transition: background-color 0.3s ease;
     &:hover {
       background-color: #11804e;
       cursor: pointer;
