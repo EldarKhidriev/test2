@@ -8,7 +8,8 @@
     "start": "webpack serve",
     "build": "webpack --mode production",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -r git@github.com:EldarKhidriev/test2.git"
+
   },
   "keywords": [],
   "author": "",
