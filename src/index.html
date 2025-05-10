@@ -179,7 +179,8 @@
         </div>
         <div class="modal__group">
           
-          <input type="tel" id="phone" name="phone" class="modal__input" required pattern="^\+?[0-9\s\-]{7,15}$" placeholder="Номер телефона*">
+          <input type="tel" id="phone" name="phone" class="modal__input" required pattern="^\+\d{1} \(\d{3}\) \d{3}-\d{4}$" placeholder="Номер телефона*">
+
           <span class="modal__error" id="phoneError"></span>
         </div>
         <div class="modal__bottom-conteiner">
