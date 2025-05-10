@@ -1,11 +1,11 @@
 import './styles/main.scss';
 
 const modal = document.getElementById('modal');
-  const openModalButtons = document.querySelectorAll('.openModal'); // заменили на querySelectorAll
+  const openModalButtons = document.querySelectorAll('.openModal');
   const closeModal = document.getElementById('closeModal') || modal.querySelector('.modal__close');
   const modalOverlay = document.getElementById('modalOverlay');
 
-  // Вешаем обработчик на каждую кнопку открытия модалки
+
   openModalButtons.forEach(button => {
     button.addEventListener('click', () => {
       modal.classList.add('modal--active');
@@ -20,11 +20,11 @@ const modal = document.getElementById('modal');
     modal.classList.remove('modal--active');
   });
 
-  // === ДОБАВЛЯЕМ УПРАВЛЕНИЕ КНОПКОЙ ОТПРАВКИ ===
+
   const consentCheckbox = document.getElementById('consent');
   const submitBtn = document.getElementById('submitBtn');
 
-  // Блокируем кнопку до согласия
+ 
   submitBtn.disabled = true;
 
   consentCheckbox.addEventListener('change', function () {
@@ -80,7 +80,7 @@ const modal = document.getElementById('modal');
     if (isValid) {
       alert('Заявка отправлена!');
       this.reset();
-      submitBtn.disabled = true; // блокируем кнопку снова
+      submitBtn.disabled = true; 
       modal.classList.remove('modal--active');
     }
   });
@@ -97,7 +97,7 @@ const modal = document.getElementById('modal');
             el: '.swiper-pagination',
             clickable: true,
         },
-        initialSlide: 0, /* Устанавливаем первый слайд как активный */
+        initialSlide: 0, 
     });
 };
 

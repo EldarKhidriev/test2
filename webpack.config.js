@@ -9,7 +9,7 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: 'assets/[hash][ext][query]',
-    publicPath: '/test2/',  // Убедитесь, что это правильно для вашего сервера
+    publicPath: '/test2/',
   },
   module: {
     rules: [
@@ -34,8 +34,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/index.html', // Убедитесь, что путь правильный
-      inject: 'body', // Автоматически добавляет все скрипты в конец body
+      template: './src/index.html',
+      inject: 'body',
     }),
     new MiniCssExtractPlugin({
       filename: 'style.css',
@@ -45,7 +45,7 @@ module.exports = {
     static: './dist',
     open: true,
     port: 3000,
-    historyApiFallback: true, // Добавьте, если работаете с роутингом
+    historyApiFallback: true,
   },
   mode: 'development',
 };
