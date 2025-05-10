@@ -9,45 +9,43 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: 'assets/[hash][ext][query]',
-    publicPath: '', // Нужно для корректного пути на GitHub Pages
+    publicPath: '/test2/',  // Убедитесь, что это правильно для вашего сервера
   },
   module: {
     rules: [
       {
         test: /\.html$/,
-        use: ['html-loader']
+        use: ['html-loader'],
       },
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader'
-        ]
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(png|jpg|jpeg|svg|gif)$/i,
-        type: 'asset/resource'
-      }
-    ]
+        type: 'asset/resource',
+      },
+    ],
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.html', // Убедитесь, что путь правильный
+      inject: 'body', // Автоматически добавляет все скрипты в конец body
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.css'
-    })
+      filename: 'style.css',
+    }),
   ],
   devServer: {
     static: './dist',
     open: true,
-    port: 3000
+    port: 3000,
+    historyApiFallback: true, // Добавьте, если работаете с роутингом
   },
-  mode: 'development'
+  mode: 'development',
 };
